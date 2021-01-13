@@ -18,27 +18,40 @@ class App extends React.Component {
   }
   
   //API Key: 0QegizgIHwqHH4870fIotwRSzqYpbmLw
-   searchGifs = (name, type) =>{
+   searchGifs = (name, type) => {
     switch (type) {
       case 0: //Search
-      axios.get(`http://api.giphy.com/v1/gifs/search?q=${name}&limit=24&api_key=0QegizgIHwqHH4870fIotwRSzqYpbmLw`)
-      .then(res => {this.setState({gifs: res.data.data, rand: ""}); console.log("Search")})
-      .catch(err => console.log("Error"))
-      break;
+        this.searchGifs();
+        break;
       case 1: //random
-      axios.get(`http://api.giphy.com/v1/gifs/random?&limit=1&api_key=0QegizgIHwqHH4870fIotwRSzqYpbmLw`)
-      .then(res => {this.setState({rand: res.data.data.images.original.url}); console.log("Random")})
-      .catch(err => console.log("Error"))
+        this.random();
         break;
       default: //Default trending
-        axios.get(`http://api.giphy.com/v1/gifs/trending?api_key=0QegizgIHwqHH4870fIotwRSzqYpbmLw`)
-        .then(res => {this.setState({gifs: res.data.data, rand:""}); console.log("Trending")})
-        .catch(err => console.log("Error"))
+        this.treding();
         break;
     }
   }
 
+  //Search function
+  search = async(name) =>{
+    await axios.get(`http://api.giphy.com/v1/gifs/search?q=${name}&limit=24&api_key=0QegizgIHwqHH4870fIotwRSzqYpbmLw`)
+    .then(res => {this.setState({gifs: res.data.data, rand: ""}); console.log("Search")})
+    .catch(err => console.log("Error"))
+  }
 
+  //Random function
+  random = async() =>{
+    axios.get(`http://api.giphy.com/v1/gifs/random?&limit=1&api_key=0QegizgIHwqHH4870fIotwRSzqYpbmLw`)
+    .then(res => {this.setState({rand: res.data.data.images.original.url}); console.log("Random")})
+    .catch(err => console.log("Error"))
+  }
+
+  //Trending function
+  treding = async() =>{
+    axios.get(`http://api.giphy.com/v1/gifs/trending?api_key=0QegizgIHwqHH4870fIotwRSzqYpbmLw`)
+    .then(res => {this.setState({gifs: res.data.data, rand:""}); console.log("Trending")})
+    .catch(err => console.log("Error"))
+  }
 
   render() {
     return (
