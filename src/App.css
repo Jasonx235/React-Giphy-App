@@ -14,6 +14,73 @@ body{
   margin-top: 50px;
   margin: 0;
   padding: 0;
-  background-color: #202020;
+  background-color: black;
   color: #ffffff;
+}
+
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+input{
+  font-size: 1rem;
+  font-size: max(16px, 1em);
+  font-family: inherit;
+  padding: 0.25em 0.5em;
+  background-color: #fff;
+  border: 2px solid var(--input-border);
+  border-radius: 4px;
+  margin: 0.3125rem;
+}
+
+.gifContainer{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 50px 50px;
+
+}
+
+button{
+  font-size: 1rem;
+  font-size: max(16px, 1em);
+  font-family: inherit;
+  padding: 0.25em 0.5em;
+  color: #fff;
+  font-weight: bolder;
+  background: rgb(255,0,0);
+  background: linear-gradient(79deg, rgba(255,0,0,1) 0%, rgba(178,219,6,1) 17%, rgba(196,207,11,1) 35%, rgba(65,196,16,1) 48%, rgba(67,120,146,1) 63%, rgba(29,50,165,1) 79%, rgba(95,37,146,1) 100%);
+  border: 2px solid var(--input-border);
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+.noGif{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 40px;
+  margin:0;
+  align-items: center;
+  
+}
+
+.myGif{
+  height: 50%;
+  width: 50%;
+}
+
+.logo{
+  height: 20%;
+  width: 20%;
+}
+
+a{
+  text-align: center;
 }
