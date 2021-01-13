@@ -35,7 +35,7 @@ input{
   border: 2px solid var(--input-border);
   border-radius: 4px;
   margin: 0.3125rem;
-  
+  outline: none;
 }
 
 .gifContainer{
@@ -53,12 +53,25 @@ button{
   padding: 0.25em 0.5em;
   color: #fff;
   font-weight: bolder;
-  background: rgb(255,0,0);
-  background: linear-gradient(79deg, rgba(255,0,0,1) 0%, rgba(178,219,6,1) 17%, rgba(196,207,11,1) 35%, rgba(65,196,16,1) 48%, rgba(67,120,146,1) 63%, rgba(29,50,165,1) 79%, rgba(95,37,146,1) 100%);
+  background: #343A40;
   border: 2px solid var(--input-border);
   border-radius: 4px;
   margin-top: 1rem;
-  
+  outline: none;
+}
+
+button:active { 
+  transform: scale(0.98); 
+  /* Scaling button to 0.98 to its original size */ 
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+  /* Lowering the shadow */ 
+} 
+
+input:active{
+  transform: scale(0.98); 
+  /* Scaling button to 0.98 to its original size */ 
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+  /* Lowering the shadow */ 
 }
 .noGif{
   display: flex;
@@ -84,4 +97,32 @@ button{
 
 a{
   text-align: center;
+}
+
+
+.rainbow:hover{
+  background-image:     linear-gradient(
+     to right, 
+     #E7484F,
+     #E7484F 16.65%,
+     #F68B1D 16.65%,
+     #F68B1D 33.3%,
+     #FCED00 33.3%,
+     #FCED00 49.95%,
+     #009E4F 49.95%,
+     #009E4F 66.6%,
+     #00AAC3 66.6%,
+     #00AAC3 83.25%,
+     #732982 83.25%,
+     #732982 100%,
+     #E7484F 100%
+  
+   );
+ animation:slidebg 2s linear infinite;
+}
+
+@keyframes slidebg {
+  to {
+    background-position:20vw;
+  }
 }

@@ -63,7 +63,7 @@ class App extends React.Component {
             <h1>Giphy Search</h1>
             <p>Find your favorite GIFs!</p>
             <SearchField searchGifs={this.searchGifs}/>
-            <button onClick={()=>this.searchGifs("Hi", 1)}>Random</button>
+            <button className="rainbow" onClick={()=>this.searchGifs("Hi", 1)}>Random</button>
             <div className="gifContainer">
             <GifContainer gifs = {this.state.gifs} rand={this.state.rand}/>
             </div>

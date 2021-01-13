@@ -23,7 +23,7 @@ class SearchField extends React.Component {
     }
 
     onChange = (e) =>{
-        this.setState({[e.target.name]: e.target.value,  isEmpty: true});
+        this.setState({[e.target.name]: e.target.value,  isEmpty: false});
     }
 
     render() {
