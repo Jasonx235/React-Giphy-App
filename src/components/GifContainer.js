@@ -14,8 +14,6 @@ class GifContainer extends Component {
             return gif;
         }
         
-
-
         if(result.length > 0){
             gif = result.map(gif =>(
                 <GifCard url={gif.images.fixed_height.url} key={gif.id}/>

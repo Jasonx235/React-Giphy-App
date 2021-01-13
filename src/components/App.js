@@ -34,21 +34,21 @@ class App extends React.Component {
 
   //Search function
   search = (name) =>{
-    axios.get(`http://api.giphy.com/v1/gifs/search?q=${name}&limit=24&api_key=0QegizgIHwqHH4870fIotwRSzqYpbmLw`)
+    axios.get(`https://api.giphy.com/v1/gifs/search?q=${name}&limit=24&api_key=0QegizgIHwqHH4870fIotwRSzqYpbmLw`)
     .then(res => {this.setState({gifs: res.data.data, rand: ""}); console.log("Search")})
     .catch(err => console.log("Error"))
   }
 
   //Random function
   random = () =>{
-    axios.get(`http://api.giphy.com/v1/gifs/random?&limit=1&api_key=0QegizgIHwqHH4870fIotwRSzqYpbmLw`)
+    axios.get(`https://api.giphy.com/v1/gifs/random?&limit=1&api_key=0QegizgIHwqHH4870fIotwRSzqYpbmLw`)
     .then(res => {this.setState({rand: res.data.data.images.original.url}); console.log("Random")})
     .catch(err => console.log("Error"))
   }
 
   //Trending function
   trending = () =>{
-    axios.get(`http://api.giphy.com/v1/gifs/trending?api_key=0QegizgIHwqHH4870fIotwRSzqYpbmLw`)
+    axios.get(`https://api.giphy.com/v1/gifs/trending?api_key=0QegizgIHwqHH4870fIotwRSzqYpbmLw`)
     .then(res => {this.setState({gifs: res.data.data, rand:""}); console.log("Trending")})
     .catch(err => console.log("Error"))
   }
