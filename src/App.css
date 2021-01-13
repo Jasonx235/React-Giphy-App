@@ -35,6 +35,7 @@ input{
   border: 2px solid var(--input-border);
   border-radius: 4px;
   margin: 0.3125rem;
+  
 }
 
 .gifContainer{
@@ -57,6 +58,7 @@ button{
   border: 2px solid var(--input-border);
   border-radius: 4px;
   margin-top: 1rem;
+  
 }
 .noGif{
   display: flex;

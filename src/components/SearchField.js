@@ -5,7 +5,7 @@ import React from 'react';
 class SearchField extends React.Component {
 
     state = {
-        search: '',
+        search: "",
         isEmpty: true
     }
 
